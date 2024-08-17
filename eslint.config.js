@@ -30,6 +30,7 @@ export default tseslint.config({
       "warn",
       { allowConstantExport: true },
     ],
+
     "sort-imports": "off",
     "plugin-simple-import-sort/exports": "error",
     "plugin-simple-import-sort/imports": [
@@ -37,7 +38,7 @@ export default tseslint.config({
       {
         groups: [
           ["^react", "^@?\\w"],
-          ["^@(([\\/.]?\\w)|assets|test-utils)"],
+          ["^~(([\\/.]?\\w)|assets|test-utils)"],
           ["^\\u0000"],
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
@@ -45,6 +46,9 @@ export default tseslint.config({
         ],
       },
     ],
+
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+
     "@stylistic/indent": ["error", 2, { SwitchCase: 1 }],
     "@stylistic/quotes": ["error", "double"],
     "@stylistic/space-before-blocks": "error",

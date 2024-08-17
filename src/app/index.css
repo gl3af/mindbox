@@ -63,7 +63,12 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground font-primary;
+    @apply bg-muted text-foreground font-primary min-h-dvh;
+  }
+
+  #root {
+    @apply container min-h-dvh;
   }
 }
