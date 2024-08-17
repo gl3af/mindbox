@@ -12,12 +12,14 @@ export function PanelFooter() {
   const declination = getDeclination(left, ["item", "items"]);
 
   return (
-    <div className="border-t p-4 flex items-center justify-between text-primary/70">
+    <div className="border-t gap-4 flex-col md:flex-row p-4 flex md:items-center justify-between text-primary/70">
       <p>
         {left} {declination} left
       </p>
       <TodoFilter data-testid="filters" />
-      <button onClick={clearCompleted}>Clear completed</button>
+      <button onClick={clearCompleted} className="w-fit">
+        Clear completed
+      </button>
     </div>
   );
 }
